@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的个人网站上线啦 | Mr.何</title>
+  <meta name="description" content="从零搭建个人网站并部署到 GitHub Pages 的过程记录。">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="nav-brand" href="../index.html">Mr.何<span class="nav-brand-dot"></span></a>
+      <a class="btn btn-ghost" href="../index.html#blog">返回博客</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post-article container">
+      <h1>基于YOLOv5深度神经网络的鱼类目标检测</h1>
+      <p class="post-meta">2024 年 5 月 31 日 · 3 分钟阅读</p>
+
+      <p>这个是我毕业论文中的项目，</p>
+
+      <h2>数据采集</h2>
+      <p>所以本文采集了海南省三亚市附近的常见鱼类图像，包括Amphiprion ocellaris（公子小丑鱼）、Zebrasoma flavescens（黄高鳍刺尾鱼）、Acanthurus pyroferus（黑鳃刺尾鱼）、Hemitaurichthys polylepis（多鳞霞鲽鱼）、Chromis viridis（蓝绿光鳃鱼）、Amphiprion pereula（三带双锯鱼）、Premnas biaculeatus（棘颊雀鲷）、Chrysiptera taupou（陶波金翅雀鲷）、Dascyllus aruanus（宅泥鱼）、Paracanthurus hepatus（拟刺尾鲷）、Amphiprion polymnus（鞍斑双锯鱼）在内的11种常见的鱼类并使用相机拍摄的方式总共获取到3936张图片，经过人工筛选去除质量不佳的图片后，仍保留了3396张实地拍摄的有效图片。</p>
+      <img src="../images/fish-dataset.png" alt="鱼类数据集预览">
+      <h2>数据预处理</h2>
+      <p>由于建模并训练权重需要大量的训练数据，同时为了减少由图像变换对南海典型鱼类检测的影响，所以要对训练集进行数据预处理，具体操作有顺时针翻转、逆时针翻转、水平翻转、垂直翻转、灰度化五种方法。</p>
+      <img src="../images/data-chuli.png" alt="数据预处理">
+      <h2>数据标注</h2>
+      <p>数据标注是将原始数据与相关信息或标签关联起来的过程。在机器学习和深度学习领域，数据标注是非常重要的，这个过程通常为每个图像创建一个对应的标签文件，其中包含对象的类别和边界框的坐标信息。并且模型也需要通过已标注的数据来学习和进行预测。在这里本文使用了makesense.ai这个在线数据标注网站进行全人工手动标注，makesense操作界面如图4.2所示。将训练所需图片数据导入，选择Object Detection，随后把鱼类名称标签导入，手动对每一张图片上鱼类目标信息进行标注，最后在网站Actions中选择Export Annotations生成YOLO数据集。</p>
+      <img src="../images/数据标注.png" alt="数据标注">
+      <h2>链接数据</h2>
+      <p>上述过程数据集建立完成后，需要与YOLO模型建立链接。在这一过程中本文将自建数据采用COCO数据集的形式与模型链接，首先在YOLO工程中新建MyData目录，在MyData中新建images和labels文件夹，并且在下面各建立test和train文件夹，其次将自制的图片数据放入images/train文件夹下以及标注生成的labels放入labels/train下，然后复制coco128.yaml文件新建MyData.yaml修改该文件中的数据路径以及数据标签等信息</p>
+      <img src="../images/链接数据.png" alt="链接数据">
+      <p>上述工作全部做完后就可以开始训练了，不过在开始训练之前还需要对模型进行调参。</p>
+      <h2>训练效果演示</h2>
+      <div class="card-thumb card-video-cover" id="yoloVideoCover">
+        <span class="play-icon" aria-hidden="true">▶</span>
+        <span class="play-label">点击播放训练效果视频</span>
+        <video id="yoloVideo" src="../videos/1.mp4" controls preload="none"></video>
+      </div>
+      <blockquote>「用心生活，认真做事。」</blockquote>
+
+      <a class="btn btn-primary" href="../index.html">返回首页</a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Mr.何 · 用心生活，认真做事</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
