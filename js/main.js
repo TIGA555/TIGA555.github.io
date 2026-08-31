@@ -35,9 +35,9 @@ navLinks.addEventListener("click", (event) => {
 // ---------- 首屏打字机效果 ----------
 const typedLine = document.getElementById("typedLine");
 const lines = [
-  "一名热爱生活的设计师",
-  "用代码和创意解决问题",
-  "记录成长，分享想法",
+  "一名热爱生活的普通人",
+  "喜欢动手做点有趣的东西",
+  "正在成为更好的自己",
 ];
 let lineIndex = 0;
 let charIndex = 0;
@@ -99,11 +99,21 @@ contactForm.addEventListener("submit", (event) => {
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  // 注意：把 here@example.com 换成你自己的邮箱
-  const mailto = `mailto:here@example.com?subject=来自 ${encodeURIComponent(name)} 的留言&body=${encodeURIComponent(message + "\n\n来自邮箱：" + email)}`;
+  const mailto = `mailto:1034945331@qq.com?subject=来自 ${encodeURIComponent(name)} 的留言&body=${encodeURIComponent(message + "\n\n来自邮箱：" + email)}`;
   window.location.href = mailto;
   formTip.textContent = "已为你打开邮件客户端，点击发送即可送达～";
 });
+
+// ---------- 视频卡片：点击封面播放 ----------
+const videoCover = document.getElementById("bionicVideoCover");
+const bionicVideo = document.getElementById("bionicVideo");
+
+if (videoCover && bionicVideo) {
+  videoCover.addEventListener("click", () => {
+    videoCover.classList.add("playing");
+    bionicVideo.play();
+  });
+}
 
 // ---------- 页脚年份 ----------
 document.getElementById("year").textContent = new Date().getFullYear();

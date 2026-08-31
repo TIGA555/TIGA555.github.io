@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>你的名字 | 个人网站</title>
+  <title>Mr.何 | 个人网站</title>
   <meta name="description" content="这是我的个人网站，介绍我做过的事、写过的文章，以及如何联系我。">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
@@ -13,7 +13,7 @@
   <!-- 顶部导航 -->
   <header class="site-header" id="siteHeader">
     <nav class="nav container" aria-label="主导航">
-      <a class="nav-brand" href="#top">你的名字<span class="nav-brand-dot">.</span></a>
+      <a class="nav-brand" href="#top">Mr.何<span class="nav-brand-dot">.</span></a>
       <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -33,10 +33,10 @@
     <!-- 首屏 -->
     <section class="hero">
       <div class="container hero-inner">
-        <div class="hero-avatar" aria-hidden="true">你</div>
+        <div class="hero-avatar" aria-hidden="true">何</div>
         <p class="hero-hello">你好，我是</p>
-        <h1 class="hero-name">你的名字</h1>
-        <p class="hero-tagline" id="typedLine">这里写一句你的自我介绍，比如「一名热爱生活的设计师」。</p>
+        <h1 class="hero-name">Mr.何</h1>
+        <p class="hero-tagline" id="typedLine"></p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">看看我的作品</a>
           <a class="btn btn-ghost" href="#contact">联系我</a>
@@ -49,15 +49,20 @@
       <div class="container">
         <h2 class="section-title">关于我</h2>
         <div class="about-grid">
-          <div class="about-photo" aria-label="个人照片占位">你的照片</div>
+          <div class="about-photo" aria-label="个人照片">
+            <span class="about-photo-letter">何</span>
+            <span class="about-photo-name">Mr.何</span>
+          </div>
           <div class="about-text">
-            <p>这里写一段关于你的介绍，两三句话即可。例如：</p>
-            <blockquote>「我是谁、我在做什么、我相信什么。用最自然的方式讲一个关于你的故事。」</blockquote>
-            <p>下面再补充一些细节：你来自哪里、现在住在哪座城市、平时喜欢做什么、为什么想做这个网站。</p>
+            
+            <blockquote>「鄙人毕业于海南热带海洋学院，专业是海洋技术。也许你会好奇这个专业是干什么的，根据我的专业课
+              可以简单理解为是海洋与电子结合的专业（实际上既不海洋，也不电子。我的评价是拉完了ㅇㅅㅇ）」</blockquote>
+            <p>喜欢动手做东西：从 YOLOv5 鱼类检测、STM32 仿生手，到这个个人网站，都是边学边做出来的。我相信，学习最好的方式就是亲手把它做出来。</p>
+            <p>现在在海口，白天学习、晚上折腾，正在慢慢把自己感兴趣的东西一个个点亮。</p>
             <ul class="about-facts">
-              <li><strong>常驻城市：</strong>你的城市</li>
-              <li><strong>目前在做：</strong>你的工作或学习</li>
-              <li><strong>兴趣爱好：</strong>旅行 / 摄影 / 读书……</li>
+              <li><strong>常驻城市：</strong>海口</li>
+              <li><strong>目前在做：</strong>学习ing(啥都想学，根本学不完(ﾟ´Д｀ﾟ)ﾟ)</li>
+              <li><strong>兴趣爱好：</strong>piano（自学中，菜的扣脚◉‿◉）</li>
             </ul>
           </div>
         </div>
@@ -68,24 +73,30 @@
     <section class="section section-alt" id="skills">
       <div class="container">
         <h2 class="section-title">我的技能</h2>
-        <p class="section-subtitle">把你会的东西列出来，让别人一眼看到你的亮点。</p>
+        <p class="section-subtitle">苦逼自学</p>
         <div class="skills-grid">
           <div class="skill-card">
-            <h3>技能分类一</h3>
-            <div class="skill-bar"><span style="--p: 90%">熟练</span></div>
+            <div class="skill-head">
+              <h3>YOLO模型部署训练</h3>
+              <span class="skill-level">还算熟练</span>
+            </div>
+            <div class="skill-bar"><span style="--p: 80%"></span></div>
           </div>
           <div class="skill-card">
-            <h3>技能分类二</h3>
-            <div class="skill-bar"><span style="--p: 75%">进阶</span></div>
+            <div class="skill-head">
+              <h3>AI Agent 使用</h3>
+              <span class="skill-level">熟练</span>
+            </div>
+            <div class="skill-bar"><span style="--p: 90%"></span></div>
           </div>
           <div class="skill-card">
-            <h3>技能分类三</h3>
-            <div class="skill-bar"><span style="--p: 60%">学习中</span></div>
+            <div class="skill-head">
+              <h3>STM32 单片机</h3>
+              <span class="skill-level">学习中</span>
+            </div>
+            <div class="skill-bar"><span style="--p: 35%"></span></div>
           </div>
-          <div class="skill-card">
-            <h3>技能分类四</h3>
-            <div class="skill-bar"><span style="--p: 80%">熟练</span></div>
-          </div>
+
         </div>
       </div>
     </section>
@@ -94,29 +105,37 @@
     <section class="section" id="projects">
       <div class="container">
         <h2 class="section-title">我的作品</h2>
-        <p class="section-subtitle">展示你做过的项目：放上截图、一句话说明和链接。</p>
+        <p class="section-subtitle">以下是本人在校期间完成的项目。</p>
         <div class="card-grid">
           <article class="card">
-            <div class="card-thumb" aria-hidden="true">项目截图</div>
+            <img class="card-thumb" src="images/fish-detection.png" alt="鱼类目标检测效果" style="object-fit:cover;">
             <div class="card-body">
-              <h3>项目名称一</h3>
-              <p>用一两句话说明这个项目是什么、你做了什么、取得了什么结果。</p>
+              <h3>基于YOLOv5深度神经网络的鱼类目标检测</h3>
+              <p>在本地计算机部署YOLOv5目标检测模型并对10种常见的热带鱼类进行目标检测训练</p>
               <a class="card-link" href="#">查看详情 →</a>
             </div>
           </article>
           <article class="card">
-            <div class="card-thumb" aria-hidden="true">项目截图</div>
+            <div class="card-thumb card-video-cover" id="bionicVideoCover">
+              <span class="play-icon" aria-hidden="true">▶</span>
+              <span class="play-label">点击播放演示视频</span>
+              <video id="bionicVideo" src="videos/project-demo.mp4" controls preload="none"></video>
+            </div>
             <div class="card-body">
-              <h3>项目名称二</h3>
-              <p>用一两句话说明这个项目是什么、你做了什么、取得了什么结果。</p>
+              <h3>STM32 仿生手</h3>
+              <p>使用 STM32F103C8T6 单片机做主控，通过 MPU6050 陀螺仪收集角度，主控与陀螺仪 IIC 通信控制舵机。</p>
               <a class="card-link" href="#">查看详情 →</a>
             </div>
           </article>
           <article class="card">
-            <div class="card-thumb" aria-hidden="true">项目截图</div>
+            <a class="card-thumb card-link-cover" href="https://tiga555.github.io" target="_blank" rel="noopener">
+              <span class="link-icon" aria-hidden="true">↗</span>
+              <span class="link-domain">tiga555.github.io</span>
+              <span class="link-hint">点击访问线上网站</span>
+            </a>
             <div class="card-body">
-              <h3>项目名称三</h3>
-              <p>用一两句话说明这个项目是什么、你做了什么、取得了什么结果。</p>
+              <h3>个人网站搭建部署</h3>
+              <p>一直想做一个属于自己的个人博客网站，目前部署在 GitHub Pages 上，国内访问偶尔较慢。</p>
               <a class="card-link" href="#">查看详情 →</a>
             </div>
           </article>
@@ -133,25 +152,23 @@
           <article class="card">
             <div class="card-body">
               <p class="card-meta">2026 年 8 月 · 3 分钟阅读</p>
-              <h3>我的第一篇文章</h3>
-              <p>这里写文章的摘要，一两句话即可，点击标题阅读全文。</p>
-              <a class="card-link" href="#">阅读全文 →</a>
+              <h3>我的个人网站上线啦</h3>
+              <p>从零搭建、部署到 GitHub Pages 的完整过程，以及我踩过的那些坑。</p>
+              <a class="card-link" href="posts/my-website-launch.html">阅读全文 →</a>
             </div>
           </article>
-          <article class="card">
+          <article class="card card-pending">
             <div class="card-body">
-              <p class="card-meta">2026 年 7 月 · 5 分钟阅读</p>
-              <h3>第二篇文章标题</h3>
-              <p>这里写文章的摘要，一两句话即可，点击标题阅读全文。</p>
-              <a class="card-link" href="#">阅读全文 →</a>
+              <p class="card-meta">准备中</p>
+              <h3>YOLOv5 实战笔记</h3>
+              <p>从数据集整理到模型部署的全过程记录，正在整理中。</p>
             </div>
           </article>
-          <article class="card">
+          <article class="card card-pending">
             <div class="card-body">
-              <p class="card-meta">2026 年 6 月 · 4 分钟阅读</p>
-              <h3>第三篇文章标题</h3>
-              <p>这里写文章的摘要，一两句话即可，点击标题阅读全文。</p>
-              <a class="card-link" href="#">阅读全文 →</a>
+              <p class="card-meta">准备中</p>
+              <h3>STM32 学习笔记</h3>
+              <p>从点灯到仿生手，我的单片机踩坑之旅，敬请期待。</p>
             </div>
           </article>
         </div>
@@ -177,12 +194,11 @@
             <textarea id="message" name="message" rows="4" placeholder="写点什么吧……" required></textarea>
           </div>
           <button class="btn btn-primary" type="submit">发送邮件</button>
-          <p class="form-tip" id="formTip">提示：纯静态网站本身收不到表单，这里会调起你的邮箱客户端发送。</p>
+          <p class="form-tip" id="formTip">填好后点击发送，会打开你的邮箱客户端。</p>
         </form>
         <div class="contact-links">
-          <a href="mailto:you@example.com" class="contact-link">邮箱：you@example.com</a>
-          <a href="#" class="contact-link">GitHub：@yourname</a>
-          <a href="#" class="contact-link">微博 / 微信公众号：你的账号</a>
+          <a href="mailto:1034945331@qq.com" class="contact-link"><span class="contact-tag">邮箱</span>1034945331@qq.com</a>
+          <a href="https://github.com/TIGA555" class="contact-link"><span class="contact-tag">GitHub</span>@TIGA555</a>
         </div>
       </div>
     </section>
@@ -190,7 +206,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year">2026</span> 你的名字 · 用心生活，认真做事</p>
+      <p>© <span id="year">2026</span> Mr.何 · 用心生活，认真做事</p>
     </div>
   </footer>
 

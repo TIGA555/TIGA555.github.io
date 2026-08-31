@@ -123,6 +123,11 @@ a:hover {
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
+.theme-toggle {
+  border: none;
+  background: var(--primary-soft);
+}
+
 .theme-toggle:hover,
 .nav-toggle:hover {
   transform: translateY(-1px);
@@ -157,7 +162,7 @@ a:hover {
 
 /* ---------- 首屏 ---------- */
 .hero {
-  min-height: 92vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,8 +261,8 @@ a:hover {
 
 .btn-ghost {
   background: transparent;
-  color: var(--text);
-  border: 1px solid var(--border);
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
 }
 
 /* ---------- 通用章节 ---------- */
@@ -294,15 +299,30 @@ a:hover {
 }
 
 .about-photo {
-  aspect-ratio: 3 / 4;
-  border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--primary-soft), var(--bg-alt));
-  border: 1px solid var(--border);
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: linear-gradient(150deg, var(--primary), #9a6fe0);
+  border: none;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
-  font-size: 0.95rem;
+  color: #fff;
+  gap: 10px;
+  box-shadow: 0 16px 40px var(--primary-soft);
+}
+
+.about-photo-letter {
+  font-size: 4.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about-photo-name {
+  font-size: 1rem;
+  opacity: 0.9;
+  letter-spacing: 0.08em;
 }
 
 .about-text p {
@@ -350,9 +370,26 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
-.skill-card h3 {
-  font-size: 1.02rem;
+.skill-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   margin-bottom: 16px;
+}
+
+.skill-head h3 {
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+.skill-level {
+  font-size: 0.78rem;
+  color: var(--primary);
+  background: var(--primary-soft);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 .skill-bar {
@@ -363,17 +400,12 @@ a:hover {
 }
 
 .skill-bar span {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 8px;
+  display: block;
   height: 100%;
   width: var(--p);
   background: linear-gradient(90deg, var(--primary), #9a6fe0);
-  color: #fff;
-  font-size: 0.68rem;
   border-radius: 999px;
-  white-space: nowrap;
+  transition: width 0.8s ease;
 }
 
 /* ---------- 卡片（作品 / 博客） ---------- */
@@ -407,6 +439,113 @@ a:hover {
   justify-content: center;
   color: var(--text-muted);
   font-size: 0.9rem;
+}
+
+.card-thumb img,
+.card-thumb video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #000;
+}
+
+.card-video-cover {
+  position: relative;
+  flex-direction: column;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--primary), #9a6fe0 60%, #c06fe0);
+  cursor: pointer;
+  overflow: hidden;
+  color: #fff;
+}
+
+.card-video-cover video {
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.card-video-cover.playing video {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card-video-cover.playing .play-icon,
+.card-video-cover.playing .play-label {
+  display: none;
+}
+
+.card-link-cover {
+  flex-direction: column;
+  gap: 8px;
+  color: #fff;
+  background: linear-gradient(135deg, #16a3b8, #4f8fe0 60%, #6a5bd6);
+  text-decoration: none;
+}
+
+.card-link-cover:hover {
+  color: #fff;
+}
+
+.card-link-cover:hover .link-icon {
+  transform: translate(2px, -2px);
+}
+
+.link-icon {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.link-domain {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.link-hint {
+  font-size: 0.85rem;
+  opacity: 0.88;
+}
+
+.play-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  padding-left: 4px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+  transition: transform 0.2s ease;
+}
+
+.card-video-cover:hover .play-icon {
+  transform: scale(1.08);
+}
+
+.play-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+.card-pending {
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+  border-style: dashed;
+  box-shadow: var(--shadow);
+}
+
+.card-pending .card-meta {
+  color: var(--text-muted) !important;
 }
 
 .card-body {
@@ -479,8 +618,9 @@ a:hover {
 }
 
 .form-tip {
-  font-size: 0.82rem;
-  color: var(--text-muted);
+  font-size: 0.92rem;
+  color: var(--primary);
+  font-weight: 500;
 }
 
 .contact-links {
@@ -489,13 +629,69 @@ a:hover {
   gap: 8px;
 }
 
+.contact-tag {
+  display: inline-block;
+  min-width: 58px;
+  margin-right: 10px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 .contact-link {
   color: var(--text-muted);
   font-size: 0.98rem;
+  display: inline-flex;
+  align-items: center;
 }
 
 .contact-link:hover {
   color: var(--primary);
+}
+
+/* ---------- 文章页 ---------- */
+.post-article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 120px 24px 72px;
+}
+
+.post-article h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 36px;
+}
+
+.post-article h2 {
+  font-size: 1.35rem;
+  margin: 32px 0 12px;
+}
+
+.post-article p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.post-article blockquote {
+  margin: 22px 0;
+  padding: 16px 20px;
+  border-left: 4px solid var(--primary);
+  background: var(--primary-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.post-article .btn {
+  margin-top: 24px;
 }
 
 /* ---------- 页脚 ---------- */
@@ -540,7 +736,7 @@ a:hover {
   }
 
   .about-photo {
-    max-width: 260px;
+    margin: 0 auto;
   }
 
   .section {

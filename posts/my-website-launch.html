@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的个人网站上线啦 | Mr.何</title>
+  <meta name="description" content="从零搭建个人网站并部署到 GitHub Pages 的过程记录。">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="nav-brand" href="../index.html">Mr.何<span class="nav-brand-dot">.</span></a>
+      <a class="btn btn-ghost" href="../index.html#blog">返回博客</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post-article container">
+      <h1>我的个人网站上线啦</h1>
+      <p class="post-meta">2026 年 8 月 31 日 · 3 分钟阅读</p>
+
+      <p>一直以来都想做一个属于自己的个人网站，把做过的东西、学到的知识记录下来。今天，这个想法终于落地了——网站正式上线，任何人都可以通过 <strong>https://tiga555.github.io</strong> 访问。</p>
+
+      <h2>为什么想做个人网站</h2>
+      <p>一方面是给自己一个"数字名片"：把我的项目、技能和经历放在一个地方，朋友或未来的合作者可以快速了解我；另一方面是给自己一个持续输出的空间，把学习过程中的思考沉淀下来，而不是学完就忘。</p>
+
+      <h2>网站是怎么做出来的</h2>
+      <p>整个网站是纯静态的，用 HTML、CSS 和 JavaScript 从零写起，没有使用复杂的框架。结构包含：关于我、技能、作品、博客和联系方式几个板块，还做了深浅色模式切换和手机适配。</p>
+      <p>部署方面选择了 GitHub Pages——免费、无需服务器，把代码推送到 GitHub 仓库，网站就会自动更新。这对个人静态网站来说非常合适。</p>
+
+      <h2>过程中踩过的坑</h2>
+      <p>最大的坑其实是网络问题：国内直连 GitHub 经常连接超时，推送代码一直失败。最后发现本地开着的代理工具（127.0.0.1:10808）可以正常访问 GitHub，让 Git 走代理后一次就成功了。</p>
+      <p>另外一个小坑是刚开始不小心进入了 GitHub 的"导入仓库"页面，按钮变成了 Begin import，和"新建仓库"的 Create repository 不是一回事，差点创建错。遇到不懂的页面，多看两眼再点总没错。</p>
+
+      <h2>下一步计划</h2>
+      <p>先把网站的占位内容都换成真实的，再慢慢写一些学习笔记，比如 YOLOv5 的实战记录和 STM32 的踩坑过程。等访客多了、内容稳定了，再考虑把网站迁到国内更快的托管上。</p>
+
+      <blockquote>「用心生活，认真做事。」</blockquote>
+
+      <a class="btn btn-primary" href="../index.html">返回首页</a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Mr.何 · 用心生活，认真做事</p>
+    </div>
+  </footer>
+
+</body>
+</html>
