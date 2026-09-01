@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>使用opencodex 将deep seek接入codex | Mr.何</title>
+  <meta name="description" content="使用opencodex 将deep seek接入codex">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="nav-brand" href="../index.html">Mr.何<span class="nav-brand-dot">.</span></a>
+      <a class="btn btn-ghost" href="../index.html#blog">返回博客</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post-article container">
+      <h1>使用opencodex 将deep seek接入codex</h1>
+      <p class="post-meta">2026 年 6 月 1 日 · 4 分钟阅读</p>
+
+      <p>opencodex 是一个开源的本地代理工具，它将 OpenAI Codex 的 Responses API 翻译为任意 LLM 提供商的协议，让 Claude Code、Codex CLI/App/SDK 都能无缝使用 Anthropic、Google、DeepSeek、GLM、Qwen 等 40+ 模型。</p>
+
+      <h2>一、安装Open Codex</h2>
+      <h3>1、安装node.js环境</h3>
+      <p>node.js下载地址：<a class="card-link" href="https://nodejs.org/zh-cn/download">https://nodejs.org/zh-cn/download</a></p>
+      <p>验证node.js是否安装成功可以在cmd里面依次输入下面指令验证</p>
+      <p>node -v</p> <p>npm -v</p>
+      <p>如果成功输出版本号那么则安装成功</p>
+
+
+      <h3>2、安装opencodex</h2>
+      <p>打开cmd，输入：npm install -g @ingwannu/opencodex</p>
+      <h3>3、启动opencodedx</h3>
+      <p>在cmd里面执行下面命令启动</p>
+      <p>ocx start</p>
+      <img src="../images/ocx-start.png" alt="opencodex成功启动">
+      <p>启动成功后，可以按CTRL+鼠标左键跳转红色框中的链接进入opencodex的后台，后续在这个后台中将其它模型的Api接入到opencodex，本文将以deep seek-v4-flash的模型为例子。</p>
+
+      <h3>3、接入第三方大模型</h3>
+      <p>deepseek官网：<a class="card-link" href=https://www.deepseek.com>https://www.deepseek.com</a></p>
+      <img src="../images/deepseek.png" >
+      <p>最大的坑其实是网络问题：国内直连 GitHub 经常连接超时，推送代码一直失败。本地开着的代理工具可以正常访问 GitHub，让 Git 走代理后一次就成功了。</p>
+      <p>另外一个小坑是刚开始不小心进入了 GitHub 的"导入仓库"页面，按钮变成了 Begin import，和"新建仓库"的 Create repository 不是一回事，差点创建错。遇到不懂的页面，多看两眼再点总没错。</p>
+      <blockquote>「用心生活，认真做事。」</blockquote>
+
+      <a class="btn btn-primary" href="../index.html">返回首页</a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Mr.何 · 用心生活，认真做事</p>
+    </div>
+  </footer>
+
+</body>
+</html>
