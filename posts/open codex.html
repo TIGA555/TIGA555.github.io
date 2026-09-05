@@ -40,11 +40,22 @@
       <img src="../images/ocx-start.png" alt="opencodex成功启动">
       <p>启动成功后，可以按CTRL+鼠标左键跳转红色框中的链接进入opencodex的后台，后续在这个后台中将其它模型的Api接入到opencodex，本文将以deep seek-v4-flash的模型为例子。</p>
 
-      <h3>3、接入第三方大模型</h3>
+      <h3>4、接入第三方大模型</h3>
       <p>deepseek官网：<a class="card-link" href=https://www.deepseek.com>https://www.deepseek.com</a></p>
       <img src="../images/deepseek.png" >
-      <p>最大的坑其实是网络问题：国内直连 GitHub 经常连接超时，推送代码一直失败。本地开着的代理工具可以正常访问 GitHub，让 Git 走代理后一次就成功了。</p>
-      <p>另外一个小坑是刚开始不小心进入了 GitHub 的"导入仓库"页面，按钮变成了 Begin import，和"新建仓库"的 Create repository 不是一回事，差点创建错。遇到不懂的页面，多看两眼再点总没错。</p>
+      <p>进入API界面完成注册之后，按下图顺序点击</p>
+      <img src="../images/deepseek-api.png" >
+      <p>这里注意在创建完成后，请自行保留API keys并且不要泄露给他人，否则其他人也可以调用你的Api，避免造成不必要的损失。</p>
+      <h3>5、将API接入opencodex</h3>
+      <p>在获取完API keys之后我们进入opencodex的后台，按照以下顺序进行接入。<a class="card-link" href="http://localhost:10100">http://localhost:10100</a></p>
+      <img src="../images/opencodex.png" >
+      <img src="../images/opencodex-api.png" >
+      <p>注意，opencodex由于官方维护的原因，可能您的界面会有所变化，不过这里我们的deep seek的API是付费的，所以我们选择付费的入口，假如你想选择其它厂商的API，根据界面对应选择入口即可。</p>
+      <img src="../images/opencodex-api5.png" >
+      <p>我们将刚才获取的API keys完整的输入，到此deepseek的API就成功接入codex了。</p>
+      <h3>6、如何使用</h3>
+      <p>我们在使用codex前，请先在cmd控制台输入ocx start<img src="../images/ocx-start.png" alt="opencodex成功启动">出现如图所示代码提示，证明启动成功。</p>
+      <p>然后我们通过科学上网,打开codex<img src="../images/ocx-start.png" alt="codex可以使用deep seek-v4-flash的模型了."></p>
       <blockquote>「用心生活，认真做事。」</blockquote>
 
       <a class="btn btn-primary" href="../index.html">返回首页</a>
